@@ -1,14 +1,14 @@
-class Snake{
+class Player{
 
-    constructor(size = 1, x, y){
+    constructor(x, y, size = 1, cells = [], xVel = 0, yVel = 0){
         this.size = size;
         this.x = x;
         this.y = y;
 
-        this.xVel = 0;
-        this.yVel = 0;
+        this.xVel = xVel;
+        this.yVel = yVel;
         
-        this.cells = [] //Each segement of the snakes body
+        this.cells = cells //Each segement of the snakes body
 
         this.initialise() //initialise the array by generating the snake cells
     }
@@ -75,5 +75,3 @@ class Snake{
         }
     }
 }
-
-
